@@ -21,9 +21,10 @@ class NumberPicker extends StatelessWidget with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     WidgetsBinding.instance!.addObserver(this);
 
-    return Row(mainAxisSize: MainAxisSize.min,
+    return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        IconButton( 
+        IconButton(
             onPressed: () {
               if (number > 0) {
                 number--;
@@ -32,7 +33,9 @@ class NumberPicker extends StatelessWidget with WidgetsBindingObserver {
                 onValueChanged!.call(number);
               }
             },
-            icon: Icon(Icons.remove,)),
+            icon: Icon(
+              Icons.remove,
+            )),
         Container(
           width: 70,
           child: TextField(
